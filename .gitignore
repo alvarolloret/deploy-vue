@@ -23,6 +23,6 @@ pnpm-debug.log*
 *.sw?
 
 # Terraform
-terraform/variables.tf
-terraform/.terraform*
-terraform.tfstate*
+*/terraform/variables.tf
+*/terraform/.terraform*
+*terraform.tfstate*
