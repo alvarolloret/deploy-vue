@@ -6,7 +6,7 @@
 -
 
   # Hosts: where our play will run and options it will run with
-  hosts: debian
+  hosts: ubuntu
   
   # Vars: variables that will apply to the play, on all target systems
   vars_files:
@@ -45,22 +45,22 @@
         group: root
         mode: 0600
 
-    # - name: Clone project in servers
-    #   git:
-    #     repo: git@github.com:alvarolloret/deploy-vue.git
-    #     version: master
-    #     dest: /root/blog/
-    #     accept_hostkey: yes
+    - name: Clone project in servers
+      git:
+        repo: git@github.com:alvarolloret/deploy-vue.git
+        version: master
+        dest: /root/blog/
+        accept_hostkey: yes
     
-    # - name: Install node_modules
-    #   command: npm install
-    #   args:
-    #     chdir: /root/blog/
+    - name: Install node_modules
+      command: npm install
+      args:
+        chdir: /root/blog/
 
-    # - name: Build NPM project
-    #   command: npm run build
-    #   args:
-    #     chdir: /root/blog/
+    - name: Build NPM project
+      command: npm run build
+      args:
+        chdir: /root/blog/
     
     - name: Copy dist in nginx location 
       copy:

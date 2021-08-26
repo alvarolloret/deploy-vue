@@ -29,8 +29,7 @@ resource "godaddy_domain_record" "gd-developertoentrepreneur" {
 
 resource "local_file" "foo" {
     content     = <<-EOT
-      [ubuntu
-      ]
+      [ubuntu]
       ${hcloud_server.test.ipv4_address} ansible_user=root
     EOT
     filename = "${path.module}/../ansible/hosts"
