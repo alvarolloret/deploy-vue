@@ -6,5 +6,6 @@ nginx_root_location: /var/www/html
 GODADDY_API_KEY: #KEY 1
 GODADDY_API_SECRET: #KEY 2
 hcloud_token: #KEY 3
+DOMAIN_NAME: #KEY 3
 
 ...

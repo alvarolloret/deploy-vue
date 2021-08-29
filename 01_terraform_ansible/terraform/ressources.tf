@@ -13,8 +13,8 @@ resource "hcloud_server" "test" {
 }
 
 
-resource "godaddy_domain_record" "gd-developertoentrepreneur" {
-  domain   = "developertoentrepreneur.com"
+resource "godaddy_domain_record" "gd-test" {
+  domain   = "${var.DOMAIN_NAME}"
 
 
   record {
