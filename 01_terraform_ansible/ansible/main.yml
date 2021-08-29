@@ -1,0 +1,7 @@
+---
+
+- name: Localhost install, variables setting, terraform apply
+  import_playbook: localhost_and_terraform.yml
+
+- name: Remote installs and deployements
+  import_playbook: deploy_on_remote.yml

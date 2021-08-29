@@ -1,0 +1,31 @@
+-
+  name: Localhost install, variables setting, terraform apply
+  hosts: localhost
+  vars_files:
+    - variables.yml
+
+  tasks:
+    - debug:
+        msg: "starting"
+    
+    
+    - name: Set GODADDY_API_KEY in variables.tf file
+      lineinfile: 
+        path: ../terraform/variables.tf
+        search_string: 'GODADDY_API_KEY'
+        line: variable "GODADDY_API_KEY" { default = "{{GODADDY_API_KEY}}" }
+    
+    - name: Set GODADDY_API_SECRET in variables.tf file
+      lineinfile: 
+        path: ../terraform/variables.tf
+        search_string: 'GODADDY_API_SECRET'
+        line: variable "GODADDY_API_SECRET" { default = "{{GODADDY_API_SECRET}}" }
+    
+    - name: Set hcloud_token in variables.tf file
+      lineinfile: 
+        path: ../terraform/variables.tf
+        search_string: 'hcloud_token'
+        line: variable "hcloud_token" { default = "{{hcloud_token}}" }
+
+    
+

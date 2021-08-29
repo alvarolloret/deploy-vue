@@ -1,0 +1,10 @@
+---
+nginx_root_location: /var/www/html
+
+
+# DEFINE YOUR VARIABLES HERE
+GODADDY_API_KEY: #KEY 1
+GODADDY_API_SECRET: #KEY 2
+hcloud_token: #KEY 3
+
+...
