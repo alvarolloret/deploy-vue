@@ -26,6 +26,17 @@
         path: ../terraform/variables.tf
         search_string: 'hcloud_token'
         line: variable "hcloud_token" { default = "{{hcloud_token}}" }
+    
+    - name: Set DOMAIN_NAME in variables.tf file
+      lineinfile: 
+        path: ../terraform/variables.tf
+        search_string: 'DOMAIN_NAME'
+        line: variable "DOMAIN_NAME" { default = "{{DOMAIN_NAME}}" }
+    
+    - name: Execute the Terraform application
+      terraform:
+        project_path: '../terraform/'
+        state: present
 
     
 
