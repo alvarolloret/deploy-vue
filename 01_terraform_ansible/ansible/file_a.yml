@@ -37,6 +37,6 @@
       terraform:
         project_path: '../terraform/'
         state: present
-	force_init: True
+        force_init: True
     
 
